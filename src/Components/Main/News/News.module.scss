@@ -1,0 +1,9 @@
+@import "../../mixins";
+
+
+.altHeading{
+    @include heading1;
+
+    align-self: baseline;
+    margin: min(max(calc(0.45*5vw), 5vh), 50px) 0 0 5vw;
+}
