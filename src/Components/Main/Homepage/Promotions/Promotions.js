@@ -17,15 +17,9 @@ function ImageCarousel({promotions}){
         <MarginedRegion type="section">
             <h1 className={styles.regionHeading}>Upcoming Events</h1>
             <div className={styles.promotionsContainer}>
-<<<<<<< Updated upstream
-                <img className={styles.left} src={leftImg}/>
-                <div className={styles.cardContainer}></div>
-                <img className={styles.right} src={rightImg}/>
-=======
                 <img className={styles.left} src={leftImg} alt=""/>
                 <div className={styles.cardContainer}></div>
-                <img className={styles.right} src={rightImg} alt=""/>
->>>>>>> Stashed changes
+                <img className={styles.right} src={rightImg} alt=""/>`
             </div>
         </MarginedRegion>
     );
