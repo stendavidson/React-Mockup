@@ -1,0 +1,19 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.regionHeading{
+    @include heading1;
+}
+
+.regionSubHeading{
+    @include heading2;
+}
+
+.regionText, ul{
+    @include text;
+}
+
+ul{
+    padding-left: min(max(calc(0.45*3vw), 3vh), 30px);
+}
