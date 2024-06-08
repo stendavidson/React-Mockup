@@ -1,5 +1,3 @@
-import styles from "./Homepage.module.scss";
-
 import ImageCarousel from "./ImageCarousel/ImageCarousel";
 import Promotions from "./Promotions/Promotions";
 import AboutUs from "./AboutUs/AboutUs";
