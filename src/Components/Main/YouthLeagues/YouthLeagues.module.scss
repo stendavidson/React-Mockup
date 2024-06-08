@@ -1,0 +1,17 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.regionHeading{
+    @include heading1;
+}
+
+.regionText{
+    @include text;
+}
+
+.intextImg{
+    width: min(max(calc(0.45*77vw), 77vh), 770px);
+    float: left;
+    margin: 0 min(max(calc(0.45*6vw), 6vh), 60px) min(max(calc(0.45*3vw), 3vh), 30px) 0;
+}
