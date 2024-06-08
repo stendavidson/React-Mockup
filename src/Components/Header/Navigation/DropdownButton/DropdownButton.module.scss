@@ -1,0 +1,26 @@
+@import "../../../mixins";
+
+// Navigation Bar Button Styling
+.dropdownButton{
+    @include centered-row;
+
+    position: relative;
+    z-index: 4;
+    height: 100%;
+    border-bottom: none;
+    flex-grow: 1;
+
+    &:hover{
+        border-bottom: min(1vh, 10px) solid white;
+        cursor: pointer;
+    }
+
+    .buttonLabel{
+        @include heading3;
+    }
+
+    .buttonImg{
+        width: min(max(calc(0.45*2vw), 2vh), 20px);
+        margin-left: min(max(calc(0.45*1vw), 1vh), 10px)
+    }
+}
