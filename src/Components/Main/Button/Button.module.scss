@@ -1,0 +1,21 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.themedButton{
+    @include heading3;
+    
+    align-self: center;
+    margin-top: min(max(calc(0.45*6vw), 6vh), 60px);
+    padding: 0 min(max(calc(0.45*6vw), 6vh), 60px);
+    height: min(max(calc(0.45*7vw), 7vh), 70px);
+    background-color: $theme-background;
+    color: $light-text-color;
+    border-radius: min(max(calc(0.45*1vw), 1vh), 10px);
+
+    &:hover{
+        cursor: pointer;
+        background-color: $theme-background-hover
+    }
+}
+
