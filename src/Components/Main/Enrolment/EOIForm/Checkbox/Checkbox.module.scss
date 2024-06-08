@@ -1,0 +1,40 @@
+@import "../../../../variables";
+@import "../../../../mixins";
+
+
+.inlineSection{
+    width: 100%;
+    margin-top: min(max(calc(0.45*6vw), 6vh), 60px);
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+
+    .checkbox{
+        @include centered-column;
+        
+        width: min(max(calc(0.45*6vw), 6vh), 60px);
+        height: min(max(calc(0.45*6vw), 6vh), 60px);
+        background-color: white;
+        border: min(max(calc(0.45*0.5vw), 0.5vh), 5px) solid black;
+        border-radius: min(max(calc(0.45*1vw), 1vh), 10px);
+        margin-right: min(max(calc(0.45*5vw), 5vh), 50px);
+
+        &:hover{
+            cursor: pointer;
+            border-color: $theme-background;
+        }
+
+        .check{
+            width: min(max(calc(0.45*4vw), 4vh), 40px);
+            height: min(max(calc(0.45*4vw), 4vh), 40px);
+            border-radius: min(max(calc(0.45*0.6vw), 0.6vh), 6px);
+            background-color: black;
+            display: none;
+        }
+    }
+
+    & h3{
+        @include heading3;
+    }
+}
