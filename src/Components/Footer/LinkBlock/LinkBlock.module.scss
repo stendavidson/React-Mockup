@@ -1,0 +1,19 @@
+@import "../../mixins";
+
+
+.footerBlock{
+    margin-right: min(max(calc(0.45*10vw), 10vh), 100px);
+    height: 80%;
+
+    .blockHeading{
+        @include heading2;
+    }
+
+    .pageLinks{
+        @include text;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

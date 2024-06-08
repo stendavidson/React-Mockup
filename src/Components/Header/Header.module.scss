@@ -1,0 +1,14 @@
+@import "../variables";
+@import "../mixins";
+
+.head{
+    @include centered-row;
+
+    width: 100%;
+    height: min(max(calc(0.45*15vw), 15vh), 130px);
+    position: sticky;
+    z-index: 5;
+    top: 0px;
+    background-color: $theme-background;
+    color: $light-text-color;
+}

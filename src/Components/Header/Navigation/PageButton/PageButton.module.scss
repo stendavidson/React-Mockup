@@ -1,0 +1,21 @@
+@import "../../../mixins";
+
+// Navigation Bar Button Styling
+.pageButton{
+    @include centered-row;
+
+    position: relative;
+    z-index: 4;
+    height: 100%;
+    border-bottom: none;
+    flex-grow: 1;
+
+    &:hover{
+        border-bottom: min(1vh, 10px) solid white;
+        cursor: pointer;
+    }
+
+    .buttonLabel{
+        @include heading3;
+    }
+}
