@@ -1,0 +1,41 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.regionHeading{
+    @include heading1;
+}
+
+.promotionsContainer{
+    width: 100%;
+    height: min(max(calc(0.45*40vw), 40vh), 400px);
+    display: grid;
+    column-gap: min(max(calc(0.45*3vw), 3vh), 30px);
+    grid-template-columns: min(max(calc(0.45*7vw), 7vh), 70px) auto min(max(calc(0.45*7vw), 7vh), 70px);
+
+    .cardContainer{
+        @include baseline-row;
+
+        position: relative;
+        grid-column: 2;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .left{
+        grid-column: 1;
+    }
+
+    .right{
+        grid-column: 3;
+    }
+
+    .left, .right{
+        width: min(max(calc(0.45*7vw), 7vh), 70px);
+        margin: auto 0;
+
+        &:hover{
+            cursor: pointer;
+            width: min(max(calc(0.45*7.5vw), 7.5vh), 75px);
+        }
+    }
+}
