@@ -1,0 +1,55 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+
+.newsArticle{
+    @include centered-column;
+
+    width: 90vw;
+    margin-top: min(max(calc(0.45*5vw), 6vh), 60px);
+    border-radius: min(max(calc(0.45*5vw), 5vh), 50px);
+    overflow: hidden;
+    background-color: $secondary-background-section;
+
+    & figure{
+        position: relative;
+        max-height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+
+        & img{
+            width: 100%;
+        }
+
+        & figcaption{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            padding-left: 5vw;
+            margin: 0;
+            overflow: hidden;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+            
+            & h1{
+                @include heading1;
+                color: $light-text-color;
+            }
+        }
+    }
+
+    .marginedRegion{
+        width: 80vw;
+        margin-bottom: min(max(calc(0.45*5vw), 6vh), 60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & p{
+            @include text;
+            margin-top: min(max(calc(0.45*5vw), 5vh), 50px);
+        }
+    }
+}
