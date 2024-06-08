@@ -1,0 +1,25 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+
+.embedSection{
+    @include centered-column;
+
+    width: 90vw;
+    margin-top: min(max(calc(0.45*5vw), 6vh), 60px);
+    background-color: $secondary-background-section;
+
+    & h1{
+        @include heading1;
+    
+        align-self: baseline;
+        margin: min(max(calc(0.45*5vw), 5vh), 50px) 0 0 5vw;
+    }
+
+    & div{
+        width: 100%;
+        height: min(max(calc(0.45*80vw), 80vh), 800px);
+        margin-top: min(max(calc(0.45*5vw), 5vh), 50px);
+    }
+}
+
