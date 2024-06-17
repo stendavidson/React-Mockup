@@ -5,11 +5,11 @@
     margin-right: min(max(calc(0.45*10vw), 10vh), 100px);
     height: 80%;
 
-    .blockHeading{
+    & h2{
         @include heading2;
     }
 
-    .pageLinks{
+    & p{
         @include text;
 
         &:hover{
