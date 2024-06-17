@@ -14,10 +14,10 @@ function LinkBlock({blockTitle, pages}){
 
     return (
         <div className={styles.footerBlock}>
-            <h2 className={styles.blockHeading}>{blockTitle}</h2>
+            <h2>{blockTitle}</h2>
             {pages.map((page, index) => {
                 return (
-                    <p className={styles.pageLinks} key={index} onClick={() => {setPage(page)}}>{page}</p>
+                    <p key={index} onClick={() => {setPage(page)}}>{page}</p>
                 );
             })}
         </div>

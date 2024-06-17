@@ -8,10 +8,10 @@ function InfoBlock(){
 
     return (
         <div className={styles.footerBlock}>
-            <h2 className={styles.blockHeading}>Canberra FC</h2>
-            <p className={styles.blockLines}>4 Teesdale Place</p>
-            <p className={styles.blockLines}>Stirling</p>
-            <p className={styles.blockLines}>ACT</p>
+            <h2>Canberra FC</h2>
+            <p>4 Teesdale Place</p>
+            <p>Stirling</p>
+            <p>ACT</p>
         </div>
     )
 }
