@@ -15,7 +15,7 @@
         cursor: pointer;
     }
 
-    .buttonLabel{
+    & h3{
         @include heading3;
     }
 }

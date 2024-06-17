@@ -25,7 +25,7 @@ function Dropdown({pages, setHover, hoverState}){
             {pages.map((page, index) => {
                 return (
                     <div className={styles.dropdownItem} key={index} onClick={() => {setPage(page)}}>
-                        <p className={styles.dropdownText}>{page}</p>
+                        <p>{page}</p>
                     </div>
                 );
             })}

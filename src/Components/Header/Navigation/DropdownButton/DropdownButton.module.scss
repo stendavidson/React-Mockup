@@ -15,11 +15,11 @@
         cursor: pointer;
     }
 
-    .buttonLabel{
+    & h3{
         @include heading3;
     }
 
-    .buttonImg{
+    & img{
         width: min(max(calc(0.45*2vw), 2vh), 20px);
         margin-left: min(max(calc(0.45*1vw), 1vh), 10px)
     }

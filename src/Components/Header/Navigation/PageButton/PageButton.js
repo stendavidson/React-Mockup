@@ -18,7 +18,7 @@ function PageButton({page}){
 
     return (
         <div className={styles.pageButton} onClick={() => {setPage(page)}}>
-            <h3 className={styles.buttonLabel}>{page}</h3>
+            <h3>{page}</h3>
         </div>
     );
 }

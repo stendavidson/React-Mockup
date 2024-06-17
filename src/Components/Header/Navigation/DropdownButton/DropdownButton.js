@@ -11,8 +11,8 @@ function DropdownButton({setHover}){
 
     return (
         <div className={styles.dropdownButton} onMouseEnter={() => {setHover("flex")}} onMouseLeave={() => {setHover("none")}}>
-            <h3 className={styles.buttonLabel}>More</h3>
-            <img className={styles.buttonImg} src={img} alt=""/>
+            <h3>More</h3>
+            <img src={img} alt=""/>
         </div>
     );
 }
