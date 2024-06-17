@@ -20,7 +20,7 @@
         align-items: flex-start;
     }
 
-    .copyrightNotice{
+    & p{
         @include text;
         
         margin-top: min(max(calc(0.45*10vw), 10vh), 100px);
