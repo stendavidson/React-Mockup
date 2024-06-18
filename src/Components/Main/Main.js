@@ -20,6 +20,11 @@ import TermsConditions from "./TermsConditions/TermsConditions";
  */
 function Main({page}){
 
+    // Input validation
+    if(typeof(page) !== "string"){
+        throw new TypeError("Invalid input parameter 'page' must be a string.");
+    }
+
     const title = "Canberra FC | ";
 
     let currentPage;
