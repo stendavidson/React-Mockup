@@ -14,15 +14,29 @@ import Button from "../../Button/Button";
  */
 function ContactForm({displayMessage, setDisplayMessage, checkValidity}){
 
+    // Input validation
+    if(typeof(displayMessage) !== "boolean"){
+        throw new TypeError("Invalid input parameter 'displayMessage' must be a boolean.");
+    }else if(typeof(setDisplayMessage) !== "function"){
+        throw new TypeError("Invalid input parameter 'setDisplayMessage' must be a function.");
+    }else if(typeof(checkValidity) !== "function"){
+        throw new TypeError("Invalid input parameter 'checkValidity' must be an function.");
+    }
+
     // This inline function triggers a validity check on a given element.
     const onChange = (event) => {checkValidity(event.target)};
 
     /**
      * This function handles form submission & performs validation.
      * 
-     * @param {Event} event the html event that triggered this function
+     * @param event the event that triggered this function
      */
     function submit(event){
+
+        // Input validation
+        if(typeof(event) !== "object" || !event.hasOwnProperty("type") || event.type !== "submit"){
+            throw new  TypeError("Invalid input parameter 'event' must be a valid event object.");
+        }
 
         // The default onSubmit function is prevented
         event.preventDefault();
