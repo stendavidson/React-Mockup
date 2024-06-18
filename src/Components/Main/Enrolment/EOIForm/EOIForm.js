@@ -17,6 +17,15 @@ import Checkbox from "./Checkbox/Checkbox";
  */
 function EOIForm({displayMessage, setDisplayMessage, checkValidity}){
 
+    // Input validation
+    if(typeof(displayMessage) !== "boolean"){
+        throw new TypeError("Invalid input parameter 'displayMessage' must be a boolean.");
+    }else if(typeof(setDisplayMessage) !== "function"){
+        throw new TypeError("Invalid input parameter 'setDisplayMessage' must be a function.");
+    }else if(typeof(checkValidity) !== "function"){
+        throw new TypeError("Invalid input parameter 'checkValidity' must be an function.");
+    }
+
     // This controls the behaviour of the custom checkbox - hides or displays a section of the form.
     const [checked, setChecked] = useState(false);
 
@@ -26,9 +35,14 @@ function EOIForm({displayMessage, setDisplayMessage, checkValidity}){
     /**
      * This function handles form submission & performs validation.
      * 
-     * @param {Event} event the html event that triggered this function
+     * @param event the event that triggered this function
      */
     function submit(event){
+        
+        // Input validation
+        if(typeof(event) !== "object" || !event.hasOwnProperty("type") || event.type !== "submit"){
+            throw new  TypeError("Invalid input parameter 'event' must be a valid event object.");
+        }
 
         // The default onSubmit function is prevented
         event.preventDefault();
@@ -38,11 +52,29 @@ function EOIForm({displayMessage, setDisplayMessage, checkValidity}){
         
         // The form validity is verified before "submission".
         if(!event.target.checkValidity()){
+            
             event.target.reportValidity();
+
         }else{
             setDisplayMessage(true);
         }
+        
     }
+
+
+    // Conditionally display a block of the form
+    let conditionsSection = null;
+
+    if(checked){
+        conditionsSection = (
+            <div className={styles.hiddenSection} style={{display : (checked ? "block" : "none")}}>
+                <label htmlFor="conditions">Pre-existing Health Conditions</label>
+                <br/>
+                <textarea key={"1"} name="conditions" onChange={onChange} placeholder="List any pre-existing health conditions your child has..."></textarea>
+            </div>
+        )
+    }
+    
     
     return (
         <form className={styles.Form} action="" method="" onSubmit={submit} style={{display : (displayMessage ? "none" : "flex")}}>
@@ -59,11 +91,7 @@ function EOIForm({displayMessage, setDisplayMessage, checkValidity}){
                 </div>
             </div>
             <Checkbox checked={checked} setChecked={setChecked}>The child has a pre-existing health condition</Checkbox>
-            <div className={styles.hiddenSection} style={{display : (checked ? "block" : "none")}}>
-                <label htmlFor="conditions">Pre-existing Health Conditions</label>
-                <br/>
-                <textarea name="conditions" placeholder="List any pre-existing health conditions your child has..."></textarea>
-            </div>
+            {conditionsSection}
             <div className={styles.formSection}>
                 <div>
                     <label htmlFor="guardian-fname">Guardian's First Name</label>
