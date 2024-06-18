@@ -52,7 +52,7 @@ function YouthLeagues(){
                 commodo nec tortor. Vivamus a libero vel tortor aliquam fermentum. In nec ligula non nibh malesuada dapibus ac at erat.
                 Curabitur sed feugiat libero.
             </p>
-            <Button onClick={onClick}>
+            <Button type="button" onClick={onClick}>
                 Expression of Interest Form
             </Button>
         </MarginedRegion>   
