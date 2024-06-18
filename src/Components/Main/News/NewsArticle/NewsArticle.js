@@ -14,6 +14,15 @@ import styles from "./NewsArticle.module.scss";
  */
 function NewsArticle({img, alt, title, children}){
 
+    // Input validation
+    if(typeof(img) !== "string"){
+        throw new TypeError("Invalid input parameter 'img' must be a string.");
+    }else if(typeof(alt) !== "string"){
+        throw new TypeError("Invalid input parameter 'alt' must be a string.");
+    }if(typeof(title) !== "string"){
+        throw new TypeError("Invalid input parameter 'title' must be a string.");
+    }
+
     return (
         <article className={styles.newsArticle}>
             <figure>
