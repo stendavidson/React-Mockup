@@ -4,7 +4,7 @@
 
 .foot{
     width: 100%;
-    max-height: min(max(calc(0.45*39vw), 39vh), 390px);
+    min-height: min(max(calc(0.45*39vw), 39vh), 390px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,7 +20,7 @@
         align-items: flex-start;
     }
 
-    & p{
+    .copyrightNotice{
         @include text;
         
         margin-top: min(max(calc(0.45*10vw), 10vh), 100px);

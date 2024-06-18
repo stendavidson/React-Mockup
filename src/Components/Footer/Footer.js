@@ -19,9 +19,9 @@ function Footer(){
                 <LinkBlock blockTitle="Main Pages" pages={MAIN_PAGES}/>
                 <LinkBlock blockTitle="Other Pages" pages={SECONDARY_PAGES}/>
             </div>
-            <p>© 2024 Canberra Football Club</p>
+            <p className={styles.copyrightNotice}>© 2024 Canberra Football Club</p>
         </footer>
-    )
+    );
 }
 
 export default Footer;

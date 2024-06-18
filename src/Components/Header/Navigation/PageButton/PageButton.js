@@ -11,6 +11,11 @@ import NavigationContext from "../../../../Contexts/NavigationContext";
  */
 function PageButton({page}){
 
+    // Input validation
+    if(typeof(page) !== "string"){
+        throw new TypeError("Invalid input parameter 'page' must be a string value.")
+    }
+
     /**
      * setPage: A function that will render the desired page and hide the search results.
      */

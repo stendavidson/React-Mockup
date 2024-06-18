@@ -13,7 +13,7 @@ function InfoBlock(){
             <p>Stirling</p>
             <p>ACT</p>
         </div>
-    )
+    );
 }
 
 export default InfoBlock;
