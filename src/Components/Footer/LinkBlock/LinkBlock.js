@@ -10,6 +10,12 @@ import NavigationContext from "../../../Contexts/NavigationContext";
  */
 function LinkBlock({blockTitle, pages}){
 
+    if(typeof(blockTitle) !== "string"){
+        throw new TypeError("Invalid input parameter 'blockTitle' must be a string.");
+    }else if(!(pages instanceof Array)){
+        throw new TypeError("Invalid input parameter 'pages' must be an Array.");
+    }
+
     const {setPage} = useContext(NavigationContext);
 
     return (

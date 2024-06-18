@@ -9,6 +9,11 @@ import img from "../../../../assets/images/dropdown.png";
  */
 function DropdownButton({setHover}){
 
+    // Input validation
+    if(typeof(setHover) !== "function"){
+        throw new TypeError("Invalid input parameter 'setHover' must be a function.");
+    }
+
     return (
         <div className={styles.dropdownButton} onMouseEnter={() => {setHover("flex")}} onMouseLeave={() => {setHover("none")}}>
             <h3>More</h3>
