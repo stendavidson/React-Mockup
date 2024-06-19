@@ -17,8 +17,8 @@ function Homepage(){
 
     return (
         <>
-            <ImageCarousel images={[
-                {
+            <ImageCarousel images={
+               [{
                     path : image1,
                     alt : "Lorem ipsum dolor sit amet",
                     caption : "Lorem ipsum consectetur adipiscing elit"
@@ -42,8 +42,35 @@ function Homepage(){
                     path : image5,
                     alt : "Lorem ipsum in auctor enim consectetur a",
                     caption : "Lorem ipsum convallis eu condimentum non"
-                }]}/>
-            <Promotions promotions={[]}/>
+                }]
+            }/>
+            <Promotions promotions={
+                [{
+                    title : "Lorem ipsum 1",
+                    body : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla ex,
+                            pretium vel pellentesque a, cursus non urna.`
+                },
+                {
+                    title : "Lorem ipsum 2",
+                    body : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla ex,
+                            pretium vel pellentesque a, cursus non urna.`
+                },
+                {
+                    title : "Lorem ipsum 3",
+                    body : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla ex,
+                            pretium vel pellentesque a, cursus non urna.`
+                },
+                {
+                    title : "Lorem ipsum 4",
+                    body : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla ex,
+                            pretium vel pellentesque a, cursus non urna.`
+                },
+                {
+                    title : "Lorem ipsum 5",
+                    body : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla ex,
+                            pretium vel pellentesque a, cursus non urna.`
+                }]
+            }/>
             <AboutUs/>
             <Weather/>
             <Map/>
