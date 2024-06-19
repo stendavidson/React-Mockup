@@ -16,9 +16,10 @@
         margin: min(max(calc(0.45*5vw), 5vh), 50px) 0 0 5vw;
     }
 
-    & div{
+    .weatherWidget{
         width: 100%;
-        height: min(max(calc(0.45*80vw), 80vh), 800px);
+        background-color: $secondary-background-dark;
+        height: auto;
         margin-top: min(max(calc(0.45*5vw), 5vh), 50px);
     }
 }
