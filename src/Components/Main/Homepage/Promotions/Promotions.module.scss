@@ -51,7 +51,7 @@
                 justify-self: center;
                 align-items: baseline;
                 margin: min(max(calc(0.45*3vw), 3vh), 30px);
-                color: white;
+                color: $secondary-background-section;
 
                 & h1{
                     @include heading1; 
