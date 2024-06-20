@@ -34,45 +34,45 @@ function Promotions({promotions}){
         }
 
         // Conditional will essentially loop the carousel while transitioning.
-        if(positive && (pos/-585 === (promotions.length - 1))){
+        if(positive && (pos/-590 === (promotions.length - 1))){
             setPos(0);
         }else if(!positive && pos === 0){
-            setPos(-585 * (promotions.length - 1));
+            setPos(-590 * (promotions.length - 1));
         }else if(!positive){
-            setPos(pos + 585);
+            setPos(pos + 590);
         }else{
-            setPos(pos - 585);
+            setPos(pos - 590);
         }
     }
     
     
     return (
         <MarginedRegion type="section">
-            <h1 className={styles.regionHeading}>Upcoming Events</h1>
-            <div className={styles.promotionsContainer}>
-                <img className={styles.left} src={leftImg} alt="" onClick={() => {move(false)}}
-                />
-                <div id={styles.cardContainer}>
-                    {
-                        promotions.map((promotion, index) => (
-                            <div key={index} className={styles.promotionCard} style={{
-                                transform : `translateX(min(max(calc(0.45*${pos/10}vw), ${pos/10}vh), ${pos}px))`,
-                                transition : "transform 0.5s"
-                            }}>
-                                <div className={styles.marginedCard}>
-                                    <h1>{promotion.title}</h1>
-                                    <p>
-                                        {promotion.body}
-                                    </p>
+            <h1 className={styles.regionHeading} style={{"backgroundColor" : (headings.includes("Upcoming Events") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Upcoming Events</h1>
+            <ErrorBoundary FallbackComponent={DefaultComponent}>
+                <div className={styles.promotionsContainer}>
+                    <img className={styles.left} src={leftImg} alt="" onClick={() => {move(false)}}/>
+                    <div id={styles.cardContainer}>
+                        {
+                            promotions.map((promotion, index) => (
+                                <div key={index} className={styles.promotionCard} style={{
+                                    transform : `translateX(max(${(0.45*pos)/10}vw, ${pos}px))`,
+                                    transition : "transform 0.5s"
+                                }}>
+                                    <div className={styles.marginedCard}>
+                                        <h1>{promotion.title}</h1>
+                                        <p>
+                                            {promotion.body}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))
-                    }
-                    <div className={styles.fadeBlock}></div>
+                            ))
+                        }
+                        <div className={styles.fadeBlock}></div>
+                    </div>
+                    <img className={styles.right} src={rightImg} alt="" onClick={() => {move(true)}}/>
                 </div>
-                <img className={styles.right} src={rightImg} alt="" onClick={() => {move(true)}}
-                />
-            </div>
+            </ErrorBoundary>
         </MarginedRegion>
     );
 }
