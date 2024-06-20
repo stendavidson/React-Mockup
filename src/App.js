@@ -79,7 +79,14 @@ function App() {
             page : "Enrolment",
             title : "Expression of Interest"
         },
-
+        {
+            page : "Privacy Statement",
+            title : "Privacy Statement"
+        },
+        {
+            page : "Terms & Conditions",
+            title : "Terms & Conditions"
+        }
     ]
 
     /**
