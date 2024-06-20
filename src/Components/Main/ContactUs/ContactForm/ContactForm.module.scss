@@ -1,0 +1,45 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.Form{
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .formSection{
+        width: 100%;
+        margin-top: min(max(calc(0.45*6vw), 6vh), 60px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    & label{
+        @include heading3;
+    }
+
+    & input{
+        @include text;
+
+        width: 30vw;
+        height: min(max(calc(0.45*4vw), 4vh), 40px);
+        padding: min(max(calc(0.45*1vw), 1vh), 10px);
+        border: min(max(calc(0.45*0.3vw), 0.3vh), 3px) solid black;
+        margin-right: 5vw;
+    }
+
+    & textarea{
+        @include text;
+        
+        height: 30vh;
+        width: 73.4vw;
+        padding: min(max(calc(0.45*1vw), 1vh), 10px);
+        border: min(max(calc(0.45*0.3vw), 0.3vh), 3px) solid black;
+        resize: none;
+        overflow-x: none;
+        overflow-y: scroll;
+    }
+}

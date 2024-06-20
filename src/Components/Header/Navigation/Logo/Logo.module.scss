@@ -1,0 +1,9 @@
+
+// Logo styling
+.logoBtn{
+    height: min(max(calc(0.45*11vw), 11vh), 110px);
+    
+    &:hover{
+        cursor: pointer;
+    }
+}

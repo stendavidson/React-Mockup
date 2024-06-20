@@ -1,0 +1,11 @@
+@import "../../variables";
+@import "../../mixins";
+
+
+.regionHeading{
+    @include heading1;
+}
+
+.highlights{
+    width: 80vw;
+}

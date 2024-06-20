@@ -1,0 +1,79 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.regionHeading{
+    @include heading1;
+}
+
+.promotionsContainer{
+    height: min(max(calc(0.45*40vw), 40vh), 400px);
+    display: grid;
+    column-gap: min(max(calc(0.45*3vw), 3vh), 30px);
+    grid-template-columns: min(max(calc(0.45*7vw), 7vh), 70px) auto min(max(calc(0.45*7vw), 7vh), 70px);
+
+    .left{
+        grid-column: 1;
+    }
+
+    .right{
+        grid-column: 3;
+    }
+
+    .left, .right{
+        width: min(max(calc(0.45*7vw), 7vh), 70px);
+        margin: auto 0;
+
+        &:hover{
+            cursor: pointer;
+            width: min(max(calc(0.45*7.5vw), 7.5vh), 75px);
+        }
+    }
+
+    #cardContainer{
+        @include baseline-row;
+
+        position: relative;
+        grid-column: 2;
+        align-items: center;
+        overflow: hidden;    
+
+        .promotionCard{
+            min-width: min(max(calc(0.45*56vw), 56vh), 565px);
+            max-width: min(max(calc(0.45*56vw), 56vh), 565px);
+            min-height: min(max(calc(0.45*35vw), 35vh), 350px);
+            background-color: #787878;
+            margin: 0 min(max(calc(0.45*3vw), 3vh), 30px) 0 0;
+            border-radius: min(max(calc(0.45*5vw), 5vh), 50px);
+
+            .marginedCard{
+                display: flex;
+                flex-direction: column;
+                justify-self: center;
+                align-items: baseline;
+                margin: min(max(calc(0.45*3vw), 3vh), 30px);
+                color: $secondary-background-section;
+
+                & h1{
+                    @include heading1; 
+
+                    margin: min(max(calc(0.45*1vw), 1vh), 10px) 0 min(max(calc(0.45*4vw), 4vh), 40px) 0;
+                }
+
+                & p{
+                    @include text; 
+
+                    margin: min(max(calc(0.45*1vw), 1vh), 10px) 0 min(max(calc(0.45*4vw), 4vh), 40px) 0;
+                }
+            }
+        }
+
+        .fadeBlock{
+            position: absolute;
+            right: 0px;
+            z-index: 1;
+            height: 100%;
+            width: min(max(calc(0.45*10vw), 10vh), 100px);
+            background-image: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,1))
+        }
+    }
+}
