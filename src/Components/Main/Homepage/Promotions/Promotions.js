@@ -25,17 +25,18 @@ function Promotions({promotions}){
         throw new TypeError("Invalid input parameter 'promotions' must be an Array.");
     }
 
+
     const [pos, setPos] = useState(0);
     const {headings} = useContext(SearchContext);
 
+
     /**
-     * This function increments the positional offset of a the promotion elements.
+     * This function increments the positional offset of the carousel.
      * 
      * @param positive This indicates the direction to move the carousel: true indicates
      * rightwards, false indicates leftwards.
      */
     function move(positive){
-
         // Input validation
         if(typeof(positive) !== "boolean"){
             throw new TypeError("Invalid input parameter 'positive' must be an boolean value.");
@@ -52,8 +53,8 @@ function Promotions({promotions}){
             setPos(pos - 590);
         }
     }
-    
-    
+
+
     return (
         <MarginedRegion type="section">
             <h1 className={styles.regionHeading} style={{"backgroundColor" : (headings.includes("Upcoming Events") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Upcoming Events</h1>
@@ -64,7 +65,7 @@ function Promotions({promotions}){
                         {
                             promotions.map((promotion, index) => (
                                 <div key={index} className={styles.promotionCard} style={{
-                                    transform : `translateX(min(max(calc(0.45*${pos/10}vw), ${pos/10}vh), ${pos}px))`,
+                                    transform : `translateX(max(${0.45*(pos/10)}vw, ${pos}px))`,
                                     transition : "transform 0.5s"
                                 }}>
                                     <div className={styles.marginedCard}>
@@ -84,5 +85,4 @@ function Promotions({promotions}){
         </MarginedRegion>
     );
 }
-
 export default Promotions;
