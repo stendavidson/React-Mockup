@@ -61,7 +61,6 @@ function EOIForm({displayMessage, setDisplayMessage, checkValidity}){
         
     }
 
-
     // Conditionally display a block of the form
     let conditionsSection = null;
 

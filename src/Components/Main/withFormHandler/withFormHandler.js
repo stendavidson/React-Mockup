@@ -13,7 +13,7 @@ import styles from "./withFormHandler.module.scss"
 const withSubmissionHandler = (WrappedComponent) => {
 
     // The new wrapped component will pass props to the child.
-    return (props) => {
+    return () => {
 
         const [displayMessage, setDisplayMessage] = useState(false);
 
@@ -76,16 +76,9 @@ const withSubmissionHandler = (WrappedComponent) => {
             element.reportValidity();
         }
         
-        const newProps = {
-            displayMessage : displayMessage,
-            setDisplayMessage : setDisplayMessage,
-            checkValidity : checkValidity,
-            ...props
-        }
-
         return (
             <div className={styles.formContainer}>
-                <WrappedComponent {...newProps}/>
+                <WrappedComponent displayMessage={displayMessage} setDisplayMessage={setDisplayMessage} checkValidity={checkValidity}/>
                 <h1 style={{display : (displayMessage ? "block" : "none")}}>Thank you for submitting this form we will get back to you as soon as possible</h1>  
             </div>
         );

@@ -4,6 +4,7 @@ import AboutUs from "./AboutUs/AboutUs";
 import Weather from "./Weather/Weather";
 import Map from "./Map/Map";
 
+
 import image1 from "../../../assets/images/Soccer Highlights 1.png";
 import image2 from "../../../assets/images/Soccer Highlights 2.png";
 import image3 from "../../../assets/images/Soccer Highlights 3.png";
@@ -18,7 +19,7 @@ function Homepage(){
     return (
         <>
             <ImageCarousel images={
-               [{
+            [{
                     path : image1,
                     alt : "Lorem ipsum dolor sit amet",
                     caption : "Lorem ipsum consectetur adipiscing elit"
