@@ -2,7 +2,8 @@ import { useContext } from "react";
 
 import styles from "./Dropdown.module.scss";
 
-import NavigationContext from "../../../../Contexts/NavigationContext";
+import NavigationContext from "../../../Contexts/NavigationContext";
+import SearchContext from "../../../Contexts/SearchContext";
 
 /**
  * This function renders the Page Dropdown section
@@ -24,16 +25,14 @@ function Dropdown({pages, hoverState, setHover}){
         throw new TypeError("Invalid input parameter 'setHover' must be a function.");
     }
 
-    /**
-     * setPage: A function that will render the desired page and hide the search results.
-     */
     const {setPage} = useContext(NavigationContext);
+    const {setHeadings} = useContext(SearchContext);
 
     return(
         <div className={styles.dropdown} onMouseEnter={() => {setHover("flex")}} onMouseLeave={() => {setHover("none")}} style={{display : hoverState}}>
             {pages.map((page, index) => {
                 return (
-                    <div className={styles.dropdownItem} key={index} onClick={() => {setPage(page)}}>
+                    <div className={styles.dropdownItem} key={index} onClick={() => {setPage(page); setHeadings([]);}}>
                         <p>{page}</p>
                     </div>
                 );

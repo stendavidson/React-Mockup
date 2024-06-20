@@ -1,10 +1,16 @@
+import { useContext, useState } from "react";
+import { ErrorBoundary } from 'react-error-boundary';
+
 import styles from "./Promotions.module.scss";
 
+import DefaultComponent from "../../../DefaultComponent/DefaultComponent";
 import MarginedRegion from "../../MarginedRegion/MarginedRegion";
 
 import leftImg from "../../../../assets/images/left.png"
 import rightImg from "../../../../assets/images/right.png"
-import { useState } from "react";
+
+import SearchContext from "../../../Contexts/SearchContext";
+
 
 
 /**
@@ -20,8 +26,10 @@ function Promotions({promotions}){
     }
 
     const [pos, setPos] = useState(0);
+    const {headings} = useContext(SearchContext);
 
     /**
+     * This function increments the positional offset of a the promotion elements.
      * 
      * @param positive This indicates the direction to move the carousel: true indicates
      * rightwards, false indicates leftwards.
@@ -48,31 +56,31 @@ function Promotions({promotions}){
     
     return (
         <MarginedRegion type="section">
-            <h1 className={styles.regionHeading}>Upcoming Events</h1>
-            <div className={styles.promotionsContainer}>
-                <img className={styles.left} src={leftImg} alt="" onClick={() => {move(false)}}
-                />
-                <div id={styles.cardContainer}>
-                    {
-                        promotions.map((promotion, index) => (
-                            <div key={index} className={styles.promotionCard} style={{
-                                transform : `translateX(min(max(calc(0.45*${pos/10}vw), ${pos/10}vh), ${pos}px))`,
-                                transition : "transform 0.5s"
-                            }}>
-                                <div className={styles.marginedCard}>
-                                    <h1>{promotion.title}</h1>
-                                    <p>
-                                        {promotion.body}
-                                    </p>
+            <h1 className={styles.regionHeading} style={{"backgroundColor" : (headings.includes("Upcoming Events") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Upcoming Events</h1>
+            <ErrorBoundary FallbackComponent={DefaultComponent}>
+                <div className={styles.promotionsContainer}>
+                    <img className={styles.left} src={leftImg} alt="" onClick={() => {move(false)}}/>
+                    <div id={styles.cardContainer}>
+                        {
+                            promotions.map((promotion, index) => (
+                                <div key={index} className={styles.promotionCard} style={{
+                                    transform : `translateX(min(max(calc(0.45*${pos/10}vw), ${pos/10}vh), ${pos}px))`,
+                                    transition : "transform 0.5s"
+                                }}>
+                                    <div className={styles.marginedCard}>
+                                        <h1>{promotion.title}</h1>
+                                        <p>
+                                            {promotion.body}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))
-                    }
-                    <div className={styles.fadeBlock}></div>
+                            ))
+                        }
+                        <div className={styles.fadeBlock}></div>
+                    </div>
+                    <img className={styles.right} src={rightImg} alt="" onClick={() => {move(true)}}/>
                 </div>
-                <img className={styles.right} src={rightImg} alt="" onClick={() => {move(true)}}
-                />
-            </div>
+            </ErrorBoundary>
         </MarginedRegion>
     );
 }

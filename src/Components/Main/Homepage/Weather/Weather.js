@@ -1,10 +1,14 @@
 import ReactWeather from "react-open-weather";
-import useOpenWeather from "./Patch/useOpenWeather";
-import "./WeatherWidget.css";
+import { ErrorBoundary } from 'react-error-boundary';
+import { useContext } from "react";
 
+import "./WeatherWidget.css";
 import styles from "./Weather.module.scss";
 
+import DefaultComponent from "../../../DefaultComponent/DefaultComponent";
+import useOpenWeather from "./Patch/useOpenWeather";
 
+import SearchContext from "../../../Contexts/SearchContext";
 
 
 
@@ -20,19 +24,23 @@ function Weather(){
         lang : "en",
         unit : "metric"
     });
+
+    const {headings} = useContext(SearchContext);
     
     return (
         <section className={styles.embedSection}>
-            <h1>Weather on the Pitch</h1>
+            <h1 style={{"backgroundColor" : (headings.includes("Weather On The Pitch") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Weather On The Pitch</h1>
             <div className={styles.weatherWidget}>
-                <ReactWeather 
-                    isLoading={isLoading}
-                    errorMessage={errorMessage}
-                    data={data}
-                    lang={"en"}
-                    locationLabel={"Canberra FC - Stirling"}
-                    showForecast={true}
-                />
+                <ErrorBoundary FallbackComponent={DefaultComponent} >
+                    <ReactWeather 
+                        isLoading={isLoading}
+                        errorMessage={errorMessage}
+                        data={data}
+                        lang={"en"}
+                        locationLabel={"Canberra FC - Stirling"}
+                        showForecast={true}
+                    />
+                </ErrorBoundary>
             </div>
         </section>
     );
