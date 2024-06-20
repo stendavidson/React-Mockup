@@ -5,9 +5,11 @@ import styles from "./YouthLeagues.module.scss";
 import MarginedRegion from "../MarginedRegion/MarginedRegion"
 import Button from "../Button/Button";
 
-import NavigationContext from "../../../Contexts/NavigationContext";
+import NavigationContext from "../../Contexts/NavigationContext";
+import SearchContext from "../../Contexts/SearchContext";
 
 import img from "../../../assets/images/Youth League.jpg";
+
 
 /**
  * This function renders the youth leagues' information.
@@ -15,12 +17,13 @@ import img from "../../../assets/images/Youth League.jpg";
 function YouthLeagues(){
 
     const {setPage} = useContext(NavigationContext);
+    const {headings} = useContext(SearchContext);
 
     const onClick = () => {setPage("Enrolment")};
     
     return (
         <MarginedRegion type="article">
-            <h1 className={styles.regionHeading}>Youth Leagues</h1>
+            <h1 className={styles.regionHeading} style={{"backgroundColor" : (headings.includes("Youth Leagues") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Youth Leagues</h1>
             <p className={styles.regionText}>
                 <img src={img} alt="Various youth league members playing football." className={styles.intextImg}/>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet massa molestie, bibendum magna id, pulvinar est.

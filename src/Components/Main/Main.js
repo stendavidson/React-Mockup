@@ -10,6 +10,8 @@ import Enrolment from "./Enrolment/Enrolment";
 import ContactUs from "./ContactUs/ContactUs"; 
 import PrivacyStatement from "./PrivacyStatement/PrivacyStatement";
 import TermsConditions from "./TermsConditions/TermsConditions";
+import { ErrorBoundary } from "react-error-boundary";
+import DefaultComponent from "../DefaultComponent/DefaultComponent";
 
 
 
@@ -68,7 +70,9 @@ function Main({page}){
 
     return (
         <main className={styles.mainSection}>
-            {currentPage}
+            <ErrorBoundary FallbackComponent={DefaultComponent}>
+                {currentPage}
+            </ErrorBoundary>
         </main>
     );
 }

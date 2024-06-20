@@ -1,10 +1,16 @@
+import { useContext, useState } from "react";
+import { ErrorBoundary } from 'react-error-boundary';
+
 import styles from "./Promotions.module.scss";
 
+import DefaultComponent from "../../../DefaultComponent/DefaultComponent";
 import MarginedRegion from "../../MarginedRegion/MarginedRegion";
 
 import leftImg from "../../../../assets/images/left.png"
 import rightImg from "../../../../assets/images/right.png"
-import { useState } from "react";
+
+import SearchContext from "../../../Contexts/SearchContext";
+
 
 
 /**
@@ -20,8 +26,10 @@ function Promotions({promotions}){
     }
 
     const [pos, setPos] = useState(0);
+    const {headings} = useContext(SearchContext);
 
     /**
+     * This function increments the positional offset of a the promotion elements.
      * 
      * @param positive This indicates the direction to move the carousel: true indicates
      * rightwards, false indicates leftwards.
@@ -56,7 +64,7 @@ function Promotions({promotions}){
                         {
                             promotions.map((promotion, index) => (
                                 <div key={index} className={styles.promotionCard} style={{
-                                    transform : `translateX(max(${(0.45*pos)/10}vw, ${pos}px))`,
+                                    transform : `translateX(min(max(calc(0.45*${pos/10}vw), ${pos/10}vh), ${pos}px))`,
                                     transition : "transform 0.5s"
                                 }}>
                                     <div className={styles.marginedCard}>

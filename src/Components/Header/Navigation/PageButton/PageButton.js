@@ -2,7 +2,8 @@ import { useContext } from "react";
 
 import styles from "./PageButton.module.scss";
 
-import NavigationContext from "../../../../Contexts/NavigationContext";
+import NavigationContext from "../../../Contexts/NavigationContext";
+import SearchContext from "../../../Contexts/SearchContext";
 
 /**
  * This function renders a navigation button.
@@ -16,13 +17,11 @@ function PageButton({page}){
         throw new TypeError("Invalid input parameter 'page' must be a string value.")
     }
 
-    /**
-     * setPage: A function that will render the desired page and hide the search results.
-     */
     const {setPage} = useContext(NavigationContext);
+    const {setHeadings} = useContext(SearchContext);
 
     return (
-        <div className={styles.pageButton} onClick={() => {setPage(page)}}>
+        <div className={styles.pageButton} onClick={() => {setPage(page); setHeadings([]);}}>
             <h3>{page}</h3>
         </div>
     );

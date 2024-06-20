@@ -1,16 +1,22 @@
+import { useContext } from "react";
+
 import styles from "./Ladder.module.scss";
 
 import MarginedRegion from "../MarginedRegion/MarginedRegion"
+
+import SearchContext from "../../Contexts/SearchContext";
 
 
 /**
  * This function renders the league ladder page.
  */
 function Ladder(){
+
+    const {headings} = useContext(SearchContext);
     
     return (
         <MarginedRegion type="section">
-            <h1 className={styles.regionHeading}>Ladder</h1>
+            <h1 className={styles.regionHeading} style={{"backgroundColor" : (headings.includes("Ladder") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Ladder</h1>
             <table className={styles.ladder}>
                 <thead>
                     <tr>

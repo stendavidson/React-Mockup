@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import styles from "./Logo.module.scss";
 
-import NavigationContext from "../../../../Contexts/NavigationContext";
+import NavigationContext from "../../../Contexts/NavigationContext";
 
 import img from "../../../../assets/images/logo.png";
 
