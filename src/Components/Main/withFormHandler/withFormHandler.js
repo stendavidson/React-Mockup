@@ -42,22 +42,22 @@ const withSubmissionHandler = (WrappedComponent) => {
             element.setCustomValidity("");
             
             // The form inputs are validates on the basis of their names.
-            if(element.name === "fullname" && (valid = fullNamePattern.test(element.value))){
-    
+            if(element.name === "fullname" && !(valid = fullNamePattern.test(element.value))){
+                
                 if(!valid){
                     element.setCustomValidity("Invalid name, only alphabetical input and spaces");
                 }
-            }else if(element.name.includes("name") && (valid = namePattern.test(element.value))){
+            }else if(element.name.includes("name") && element.name !== "fullname" && !(valid = namePattern.test(element.value))){
 
                 if(!valid){
                     element.setCustomValidity("Invalid name, only alphabetical input, no spaces");
                 }
-            }else if(element.name === "phone" && (valid = phonePattern.test(element.value))){
+            }else if(element.name === "phone" && !(valid = phonePattern.test(element.value))){
                 
                 if(!valid){
                     element.setCustomValidity("Invalid phone number, must be an Australian number");
                 }
-            }else if(element.name === "email" && (valid = emailPattern.test(element.value))){
+            }else if(element.name === "email" && !(valid = emailPattern.test(element.value))){
     
                 if(!valid){
                     element.setCustomValidity("Invalid email address");
