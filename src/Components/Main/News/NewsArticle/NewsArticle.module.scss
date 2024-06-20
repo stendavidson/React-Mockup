@@ -24,6 +24,8 @@
         }
 
         & figcaption{
+            @include baseline-row;
+            
             position: absolute;
             bottom: 0px;
             width: 100%;

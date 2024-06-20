@@ -1,15 +1,21 @@
+import { useContext } from "react";
+
 import styles from "./TermsConditions.module.scss";
 
 import MarginedRegion from "../MarginedRegion/MarginedRegion"
+
+import SearchContext from "../../Contexts/SearchContext";
 
 /**
  * This function renders the terms and conditions.
  */
 function TermsConditions(){
+
+    const {headings} = useContext(SearchContext);
     
     return (
         <MarginedRegion type="article">
-            <h1 className={styles.regionHeading}>Terms & Conditions</h1>
+            <h1 className={styles.regionHeading} style={{"backgroundColor" : (headings.includes("Terms & Conditions") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Terms & Conditions</h1>
             <p className={styles.regionText}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla ex, pretium vel pellentesque a, cursus non urna.
                 Vestibulum commodo dui et ipsum porttitor congue. Sed tristique tellus eget pretium congue. Ut ultricies a sapien commodo

@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 
 import styles from "./SearchBar.module.scss";
 
-import SearchContext from "../../../../Contexts/SearchContext";
+import SearchContext from "../../../Contexts/SearchContext";
 
 import img from "../../../../assets/images/search.png";
 
@@ -12,11 +12,6 @@ import img from "../../../../assets/images/search.png";
  */
 function SearchBar(){
 
-    /**
-     * siteSearch: this function performs a search on all searchable entities in the website displays the results.
-     * 
-     * setDisplayState: this function updates the search result's display style.
-     */
     const {siteSearch, setDisplayState} = useContext(SearchContext);
 
     const [searchTerm, setSearchTerm] = useState("");

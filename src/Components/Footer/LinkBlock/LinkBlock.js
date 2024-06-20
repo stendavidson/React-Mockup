@@ -2,7 +2,8 @@ import { useContext } from "react";
 
 import styles from "./LinkBlock.module.scss";
 
-import NavigationContext from "../../../Contexts/NavigationContext";
+import NavigationContext from "../../Contexts/NavigationContext";
+import SearchContext from "../../Contexts/SearchContext";
 
 
 /**
@@ -10,6 +11,7 @@ import NavigationContext from "../../../Contexts/NavigationContext";
  */
 function LinkBlock({blockTitle, pages}){
 
+    // Input validation
     if(typeof(blockTitle) !== "string"){
         throw new TypeError("Invalid input parameter 'blockTitle' must be a string.");
     }else if(!(pages instanceof Array)){
@@ -17,13 +19,14 @@ function LinkBlock({blockTitle, pages}){
     }
 
     const {setPage} = useContext(NavigationContext);
+    const {setHeadings} = useContext(SearchContext);
 
     return (
         <div className={styles.footerBlock}>
             <h2>{blockTitle}</h2>
             {pages.map((page, index) => {
                 return (
-                    <p key={index} onClick={() => {setPage(page)}}>{page}</p>
+                    <p key={index} onClick={() => {setPage(page); setHeadings([]);}}>{page}</p>
                 );
             })}
         </div>

@@ -1,4 +1,8 @@
+import { useContext } from "react";
+
 import styles from "./NewsArticle.module.scss";
+
+import SearchContext from "../../../Contexts/SearchContext";
 
 
 /**
@@ -23,12 +27,14 @@ function NewsArticle({img, alt, title, children}){
         throw new TypeError("Invalid input parameter 'title' must be a string.");
     }
 
+    const {headings} = useContext(SearchContext);
+
     return (
         <article className={styles.newsArticle}>
             <figure>
                 <img src={img} alt={alt}/>
                 <figcaption>
-                    <h1>{title}</h1>
+                    <h1 style={{"backgroundColor" : (headings.includes(title) ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>{title}</h1>
                 </figcaption>
             </figure>
             <div className={styles.marginedRegion}>
