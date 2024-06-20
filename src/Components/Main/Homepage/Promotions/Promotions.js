@@ -42,14 +42,14 @@ function Promotions({promotions}){
         }
 
         // Conditional will essentially loop the carousel while transitioning.
-        if(positive && (pos/-585 === (promotions.length - 1))){
+        if(positive && (pos/-590 === (promotions.length - 1))){
             setPos(0);
         }else if(!positive && pos === 0){
-            setPos(-585 * (promotions.length - 1));
+            setPos(-590 * (promotions.length - 1));
         }else if(!positive){
-            setPos(pos + 585);
+            setPos(pos + 590);
         }else{
-            setPos(pos - 585);
+            setPos(pos - 590);
         }
     }
     
