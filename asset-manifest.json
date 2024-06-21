@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/github-pages-app/static/css/main.f6bb247d.css",
-    "main.js": "/github-pages-app/static/js/main.1fef2d2f.js",
-    "static/js/453.d997ce60.chunk.js": "/github-pages-app/static/js/453.d997ce60.chunk.js",
-    "static/media/Highlights.mp4": "/github-pages-app/static/media/Highlights.d78812cea271707ed258.mp4",
-    "static/media/Soccer News.png": "/github-pages-app/static/media/Soccer News.5691075dc091bc221a5b.png",
-    "static/media/logo.png": "/github-pages-app/static/media/logo.5a81e229ea9916d4d0a2.png",
-    "static/media/left.png": "/github-pages-app/static/media/left.17837efbc54009b26f18.png",
-    "static/media/right.png": "/github-pages-app/static/media/right.d2c484fe04e0dfd819a8.png",
-    "static/media/Soccer Highlights 3.png": "/github-pages-app/static/media/Soccer Highlights 3.efcfc78f80c73ce5aa68.png",
-    "static/media/Soccer Highlights 2.png": "/github-pages-app/static/media/Soccer Highlights 2.4efdcc0e94c2e4741b71.png",
-    "static/media/Soccer Highlights 5.png": "/github-pages-app/static/media/Soccer Highlights 5.bc9b71e7beda9e563c42.png",
-    "static/media/Soccer Highlights 4.png": "/github-pages-app/static/media/Soccer Highlights 4.d4c54ee8376c03e3da58.png",
-    "static/media/Soccer Highlights 1.png": "/github-pages-app/static/media/Soccer Highlights 1.2eee48af35dd79aad097.png",
-    "static/media/Youth League.jpg": "/github-pages-app/static/media/Youth League.4eff39fc861b51244514.jpg",
-    "static/media/search.png": "/github-pages-app/static/media/search.50690640aabe07c86e44.png",
-    "index.html": "/github-pages-app/index.html",
-    "main.f6bb247d.css.map": "/github-pages-app/static/css/main.f6bb247d.css.map",
-    "main.1fef2d2f.js.map": "/github-pages-app/static/js/main.1fef2d2f.js.map",
-    "453.d997ce60.chunk.js.map": "/github-pages-app/static/js/453.d997ce60.chunk.js.map"
+    "main.css": "/futuresports/static/css/main.f6bb247d.css",
+    "main.js": "/futuresports/static/js/main.c23a18f2.js",
+    "static/js/453.d997ce60.chunk.js": "/futuresports/static/js/453.d997ce60.chunk.js",
+    "static/media/Highlights.mp4": "/futuresports/static/media/Highlights.d78812cea271707ed258.mp4",
+    "static/media/Soccer News.png": "/futuresports/static/media/Soccer News.5691075dc091bc221a5b.png",
+    "static/media/logo.png": "/futuresports/static/media/logo.5a81e229ea9916d4d0a2.png",
+    "static/media/left.png": "/futuresports/static/media/left.17837efbc54009b26f18.png",
+    "static/media/right.png": "/futuresports/static/media/right.d2c484fe04e0dfd819a8.png",
+    "static/media/Soccer Highlights 3.png": "/futuresports/static/media/Soccer Highlights 3.efcfc78f80c73ce5aa68.png",
+    "static/media/Soccer Highlights 2.png": "/futuresports/static/media/Soccer Highlights 2.4efdcc0e94c2e4741b71.png",
+    "static/media/Soccer Highlights 5.png": "/futuresports/static/media/Soccer Highlights 5.bc9b71e7beda9e563c42.png",
+    "static/media/Soccer Highlights 4.png": "/futuresports/static/media/Soccer Highlights 4.d4c54ee8376c03e3da58.png",
+    "static/media/Soccer Highlights 1.png": "/futuresports/static/media/Soccer Highlights 1.2eee48af35dd79aad097.png",
+    "static/media/Youth League.jpg": "/futuresports/static/media/Youth League.4eff39fc861b51244514.jpg",
+    "static/media/search.png": "/futuresports/static/media/search.50690640aabe07c86e44.png",
+    "index.html": "/futuresports/index.html",
+    "main.f6bb247d.css.map": "/futuresports/static/css/main.f6bb247d.css.map",
+    "main.c23a18f2.js.map": "/futuresports/static/js/main.c23a18f2.js.map",
+    "453.d997ce60.chunk.js.map": "/futuresports/static/js/453.d997ce60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6bb247d.css",
-    "static/js/main.1fef2d2f.js"
+    "static/js/main.c23a18f2.js"
   ]
 }
