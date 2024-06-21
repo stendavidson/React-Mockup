@@ -19,7 +19,7 @@ function Highlights(){
     return (
         <MarginedRegion type="section">
             <h1 className={styles.regionHeading} style={{"backgroundColor" : (headings.includes("Highlights") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Highlights</h1>
-            <video controls alt="A highlight reel of the club's most recent game." className={styles.highlights}>
+            <video className={styles.highlights} controls data-testid="highlights-video">
                 <source src={video}/>
             </video>
         </MarginedRegion>   

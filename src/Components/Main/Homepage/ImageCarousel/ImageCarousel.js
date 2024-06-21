@@ -1,6 +1,5 @@
 import { Carousel } from "react-responsive-carousel";
 import { ErrorBoundary } from "react-error-boundary";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import "./ImageCarousel.css";
 import styles from "./Image.module.scss";

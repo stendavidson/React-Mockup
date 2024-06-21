@@ -7,8 +7,6 @@ import DefaultComponent from "../../DefaultComponent/DefaultComponent";
 import MarginedRegion from "../MarginedRegion/MarginedRegion"
 import ContactForm from "./ContactForm/ContactForm";
 
-import withSubmissionHandler from "../withFormHandler/withFormHandler";
-
 import SearchContext from '../../Contexts/SearchContext';
 
 
@@ -16,8 +14,6 @@ import SearchContext from '../../Contexts/SearchContext';
  * This function renders the youth leagues' information.
  */
 function Enrolment(){
-
-    const WrappedContactForm = withSubmissionHandler(ContactForm);
 
     const {headings} = useContext(SearchContext);
     
@@ -44,7 +40,7 @@ function Enrolment(){
             <h1 className={styles.regionHeading} style={{"backgroundColor" : (headings.includes("Send Us A Message") ? "rgba(255, 255, 0, 0.5)" : "rgba(255, 255, 0, 0.0)")}}>Send Us A Message</h1>
             <p className={styles.regionText}>If you want to send us a message please fill out the form below and we'll get back to you soon.</p>
             <ErrorBoundary FallbackComponent={DefaultComponent}>
-                <WrappedContactForm/>
+                <ContactForm/>
             </ErrorBoundary>
         </MarginedRegion>
     );

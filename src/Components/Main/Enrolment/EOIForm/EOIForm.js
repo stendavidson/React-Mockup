@@ -5,6 +5,8 @@ import styles from "./EOIForm.module.scss";
 import Button from "../../Button/Button";
 import Checkbox from "./Checkbox/Checkbox";
 
+import withSubmissionHandler from "../../withFormHandler/withFormHandler";
+
 
 /**
  * This function renders an expression of interest form to the scree.
@@ -95,7 +97,7 @@ function EOIForm({displayMessage, setDisplayMessage, checkValidity}){
                 <div>
                     <label htmlFor="guardian-fname">Guardian's First Name</label>
                     <br/>
-                    <input name="guardian-fname" onChange={onChange} type="text" placeholder="Guardian's First Name"/>
+                    <input name="guardian-fname" onChange={onChange} type="text" placeholder="Guardian's First Name" style={{borderColor : "black"}}/>
                 </div>
                 <div>
                     <label htmlFor="guardian-lname">Guardian's Last Name</label>
@@ -122,4 +124,4 @@ function EOIForm({displayMessage, setDisplayMessage, checkValidity}){
     );
 }
 
-export default EOIForm;
+export default withSubmissionHandler(EOIForm);

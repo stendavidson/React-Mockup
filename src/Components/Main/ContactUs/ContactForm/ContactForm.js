@@ -2,6 +2,8 @@ import styles from "./ContactForm.module.scss";
 
 import Button from "../../Button/Button";
 
+import withSubmissionHandler from "../../withFormHandler/withFormHandler";
+
 
 /**
  * This function renders an expression of interest form to the scree.
@@ -57,9 +59,9 @@ function ContactForm({displayMessage, setDisplayMessage, checkValidity}){
         <form className={styles.Form} action="" method="" onSubmit={submit} style={{display : (displayMessage ? "none" : "flex")}}>
             <div className={styles.formSection}>
                 <div>
-                    <label htmlFor="fullname">Name</label>
+                    <label htmlFor="fullname">Full Name</label>
                     <br/>
-                    <input name="fullname" onChange={onChange} type="text" placeholder="Child's First Name"/>
+                    <input name="fullname" onChange={onChange} type="text" placeholder="Full Name"/>
                 </div>
             </div>
             <div className={styles.formSection}>
@@ -81,4 +83,4 @@ function ContactForm({displayMessage, setDisplayMessage, checkValidity}){
     );
 }
 
-export default ContactForm;
+export default withSubmissionHandler(ContactForm);

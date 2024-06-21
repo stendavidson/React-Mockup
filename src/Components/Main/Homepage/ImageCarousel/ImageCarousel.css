@@ -1,3 +1,5 @@
+@import url("../../../../../node_modules/react-responsive-carousel/lib/styles/carousel.css");
+
 .carousel.carousel-slider .control-arrow {
     width: calc(15vw - min(calc(0.45*2vw), 2vh, 20px)) !important;
 }
