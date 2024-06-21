@@ -1,6 +1,6 @@
 # FutureSports | Canberra FC
 
-> **NOTE**\
+> [!NOTE]
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Author
@@ -28,7 +28,7 @@ Navigate the the project directory `C:\..\..\futuresports>` and execute the foll
 
     The application is accessible via [http://localhost:3000](http://localhost:3000) in your browser.
 
-    > **NOTE**\
+    > [!NOTE]
     > The page will reload when you make changes. \
     > You may also see any lint errors in the console.
 
@@ -40,7 +40,7 @@ Navigate the the project directory `C:\..\..\futuresports>` and execute the foll
 
     The test results will be visible in the console.
 
-    > **NOTE**\
+    > [!NOTE]
     > The tests will be re-executed every time a change is made.
 
 
@@ -64,7 +64,7 @@ Navigate the the project directory `C:\..\..\futuresports>` and execute the foll
 
     You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-    > **NOTE**\
+    > [!WARNING]
     > This operation is irreversible do not perform unless you are certain.
 
 
