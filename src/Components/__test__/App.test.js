@@ -188,7 +188,7 @@ test("Application navigation UI change - Terms & Conditions", async () => {
 
 
 // Integration test - navigation UI Change
-test("Application navigation UI change - Terms & Conditions", async () => {
+test("Application navigation UI change - More Dropdown", async () => {
     
     render(<App/>);
     
