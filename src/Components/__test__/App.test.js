@@ -199,6 +199,6 @@ test("Application navigation UI change - Terms & Conditions", async () => {
     // After the event is fired page content is expected
     await waitFor(() => {
         const element = screen.getByTestId("dropdown");
-        expect(element).toBeInTheDocument();
+        expect(element).toHaveStyle({"display" : "flex"});
     });
 }); 
