@@ -7,8 +7,6 @@ import DefaultComponent from "../../DefaultComponent/DefaultComponent";
 import MarginedRegion from "../MarginedRegion/MarginedRegion"
 import EOIForm from "./EOIForm/EOIForm";
 
-import withSubmissionHandler from "../withFormHandler/withFormHandler";
-
 import SearchContext from '../../Contexts/SearchContext';
 
 
@@ -16,8 +14,6 @@ import SearchContext from '../../Contexts/SearchContext';
  * This function renders the youth leagues' information.
  */
 function Enrolment(){
-
-    const WrappedEOIForm = withSubmissionHandler(EOIForm);
     
     const {headings} = useContext(SearchContext);
     
@@ -28,7 +24,7 @@ function Enrolment(){
                 If you are interested in enrolling your child in one of the youth leagues please submit the following form.
             </p>
             <ErrorBoundary FallbackComponent={DefaultComponent}>
-                <WrappedEOIForm/>
+                <EOIForm/>
             </ErrorBoundary>
         </MarginedRegion>
     );

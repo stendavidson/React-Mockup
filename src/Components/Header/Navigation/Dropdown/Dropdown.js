@@ -29,7 +29,7 @@ function Dropdown({pages, hoverState, setHover}){
     const {setHeadings} = useContext(SearchContext);
 
     return(
-        <div className={styles.dropdown} onMouseEnter={() => {setHover("flex")}} onMouseLeave={() => {setHover("none")}} style={{display : hoverState}}>
+        <div className={styles.dropdown} data-testid="dropdown" onMouseEnter={() => {setHover("flex")}} onMouseLeave={() => {setHover("none")}} style={{display : hoverState}}>
             {pages.map((page, index) => {
                 return (
                     <div className={styles.dropdownItem} key={index} onClick={() => {setPage(page); setHeadings([]);}}>
