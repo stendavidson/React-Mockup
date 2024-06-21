@@ -129,9 +129,7 @@ function App() {
                     setPage : setPage
                 }}>
                 <Header/>
-                    
-                    <Main page={page}/>
-
+                <Main page={page}/>
                 <Footer/>
             </NavigationContext.Provider>
         </SearchContext.Provider>
