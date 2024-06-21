@@ -1,43 +1,76 @@
-# Getting Started with Create React App
+# FutureSports | Canberra FC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> [!NOTE]
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Author
+Sten Healey
 
-In the project directory, you can run:
+## Description
+This react web application is a production level website prototype of a hypothetical football club "Canberra FC". This has no integrated backend services (database or microservice APIs) however it does behave as though it is a fully functional website. This includes fully functional navigation, search bar, complex transitions, messages and responses to user input.
 
-### `npm start`
+## Deployed Website
+The website is already deployed to github pages and is viewable at [Canberra FC](https://stendavidson.github.io/futuresports/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
+In order to execute this application Node.js must be installed locally. This can be downloaded from the [Node.js](https://nodejs.org/en/download/prebuilt-installer) website.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+API Keys:
+1. Please create an [OpenWeather](https://openweathermap.org/api/one-call-3) API Key.
+2. Subscribe to the One Call API 3.0
+3. Please inject your API Key into `src\Components\Main\Homepage\Weather\Weather.js`
 
-### `npm test`
+## How to Run
+Navigate the the project directory `C:\..\..\futuresports>` and execute the following commands:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. #### Run Local Test Version
 
-### `npm run build`
+    ```console
+    npm start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    The application is accessible via [http://localhost:3000](http://localhost:3000) in your browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    > [!NOTE]
+    > The page will reload when you make changes. \
+    > You may also see any lint errors in the console.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. #### Run Tests
 
-### `npm run eject`
+    ```console
+    npm test
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    The test results will be visible in the console.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    > [!NOTE]
+    > The tests will be re-executed every time a change is made.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. #### Run Build
+
+    ```console
+    npm run build
+    ```
+
+    Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+
+3. #### Eject Build - Dangeraous
+
+    ```console
+    npm run eject
+    ```
+
+    If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+    Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+    You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+    > [!WARNING]
+    > This operation is irreversible do not perform unless you are certain.
+
+
 
 ## Learn More
 
