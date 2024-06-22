@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/futuresports/static/css/main.f6bb247d.css",
-    "main.js": "/futuresports/static/js/main.c23a18f2.js",
+    "main.js": "/futuresports/static/js/main.3853b7ea.js",
     "static/js/453.d997ce60.chunk.js": "/futuresports/static/js/453.d997ce60.chunk.js",
     "static/media/Highlights.mp4": "/futuresports/static/media/Highlights.d78812cea271707ed258.mp4",
     "static/media/Soccer News.png": "/futuresports/static/media/Soccer News.5691075dc091bc221a5b.png",
@@ -17,11 +17,11 @@
     "static/media/search.png": "/futuresports/static/media/search.50690640aabe07c86e44.png",
     "index.html": "/futuresports/index.html",
     "main.f6bb247d.css.map": "/futuresports/static/css/main.f6bb247d.css.map",
-    "main.c23a18f2.js.map": "/futuresports/static/js/main.c23a18f2.js.map",
+    "main.3853b7ea.js.map": "/futuresports/static/js/main.3853b7ea.js.map",
     "453.d997ce60.chunk.js.map": "/futuresports/static/js/453.d997ce60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6bb247d.css",
-    "static/js/main.c23a18f2.js"
+    "static/js/main.3853b7ea.js"
   ]
 }
