@@ -31,9 +31,9 @@ Navigate the the project directory `C:\..\..\futuresports>` and execute the foll
 
     The application is accessible via [http://localhost:3000](http://localhost:3000) in your browser.
 
-    > [!NOTE]
-    > The page will reload when you make changes. \
-    > You may also see any lint errors in the console.
+> [!NOTE]
+> The page will reload when you make changes. \
+> You may also see any lint errors in the console.
 
 2. #### Run Tests
 
@@ -43,8 +43,8 @@ Navigate the the project directory `C:\..\..\futuresports>` and execute the foll
 
     The test results will be visible in the console.
 
-    > [!NOTE]
-    > The tests will be re-executed every time a change is made.
+> [!NOTE]
+> The tests will be re-executed every time a change is made.
 
 
 3. #### Run Build
@@ -67,8 +67,8 @@ Navigate the the project directory `C:\..\..\futuresports>` and execute the foll
 
     You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-    > [!WARNING]
-    > This operation is irreversible do not perform unless you are certain.
+> [!WARNING]
+> This operation is irreversible do not perform unless you are certain.
 
 
 
