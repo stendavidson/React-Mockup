@@ -52,8 +52,7 @@ function Promotions({promotions}){
         }else{
             setPos(pos - 595);
         }
-    }
-
+    } 
 
     return (
         <MarginedRegion type="section">
