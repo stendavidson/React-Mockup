@@ -22,7 +22,7 @@ test("Contact form renders", () => {
 
 
 // Component User Input - UI Change
-test("EOI form - invalid (Full Name)", async () => {
+test("Contact form - invalid (Full Name)", async () => {
 
     render(<ContactForm/>);
     
@@ -36,7 +36,7 @@ test("EOI form - invalid (Full Name)", async () => {
 
 
 // Component User Input - UI Change
-test("EOI form - valid (Full Name)", async () => {
+test("Contact form - valid (Full Name)", async () => {
 
     render(<ContactForm/>);
     
@@ -50,7 +50,7 @@ test("EOI form - valid (Full Name)", async () => {
 
 
 // Component User Input - UI Change
-test("EOI form - invalid (Email): no @", async () => {
+test("Contact form - invalid (Email): no @", async () => {
 
     render(<ContactForm/>);
     
@@ -64,7 +64,7 @@ test("EOI form - invalid (Email): no @", async () => {
 
 
 // Component User Input - UI Change
-test("EOI form - invalid (Email): illegal characters !", async () => {
+test("Contact form - invalid (Email): illegal characters !", async () => {
 
     render(<ContactForm/>);
     
@@ -78,7 +78,7 @@ test("EOI form - invalid (Email): illegal characters !", async () => {
 
 
 // Component User Input - UI Change
-test("EOI form - invalid (Email): double @", async () => {
+test("Contact form - invalid (Email): double @", async () => {
 
     render(<ContactForm/>);
     
@@ -92,7 +92,7 @@ test("EOI form - invalid (Email): double @", async () => {
 
 
 // Component User Input - UI Change
-test("EOI form - valid (Email)", async () => {
+test("Contact form - valid (Email)", async () => {
 
     render(<ContactForm/>);
     

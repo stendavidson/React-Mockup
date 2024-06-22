@@ -8,7 +8,7 @@ afterEach(() => {
 
 
 // Component render test
-test("Exression of Interest form renders", () => {
+test("Expression of Interest form renders", () => {
 
     render(<EOIForm/>);
     
@@ -188,6 +188,7 @@ test("EOI form - invalid (Email): no @", async () => {
     const inputElement = screen.getByPlaceholderText("Email Address: example@gmail.com");
 
     fireEvent.input(inputElement, {target : {value : "seangmail.com"}});
+    
     await waitFor(() => {expect(inputElement).toHaveStyle({"border-color" : "red"})});    
 });
 

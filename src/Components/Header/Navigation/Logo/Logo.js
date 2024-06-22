@@ -3,6 +3,7 @@ import { useContext } from "react";
 import styles from "./Logo.module.scss";
 
 import NavigationContext from "../../../Contexts/NavigationContext";
+import SearchContext from "../../../Contexts/SearchContext";
 
 import img from "../../../../assets/images/logo.png";
 
@@ -18,12 +19,10 @@ function Logo({page}){
         throw new TypeError("Invalid input parameter 'page' must be a string value.");
     }
 
-    /**
-     * setPage: A function that will render the desired page and hide the search results.
-     */
     const {setPage} = useContext(NavigationContext);
+    const {setHeadings} = useContext(SearchContext);
 
-    return <img src={img} alt="The Canberra Football Club Logo" className={styles.logoBtn} onClick={() => {setPage(page)}}/>;
+    return <img src={img} alt="The Canberra Football Club Logo" className={styles.logoBtn} onClick={() => {setPage(page); setHeadings([])}}/>;
 }
 
 export default Logo;
