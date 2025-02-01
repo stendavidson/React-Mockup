@@ -1,4 +1,4 @@
-# FutureSports | Canberra FC
+# REACT MOCKUP
 
 > [!NOTE]
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -7,7 +7,7 @@
 Sten Healey
 
 ## Description
-This react web application is a website prototype of a hypothetical football club "Canberra FC". This has no integrated backend services (database or microservice APIs) however it does behave as though it is a fully functional website. This includes fully functional navigation, search bar, complex transitions, messages and responses to user input.
+This react web application is a website prototype of a hypothetical football club "Canberra FC". This has no integrated backend services (database or microservice APIs) however it does behave as though it is a fully functional website. This includes fully functional navigation, search bar, complex transitions, messages and responses to user input. This was implemented simply as a learning excercise.
 
 ## Prerequisites
 In order to execute this application Node.js must be installed locally. This can be downloaded from the [Node.js](https://nodejs.org/en/download/prebuilt-installer) website.
